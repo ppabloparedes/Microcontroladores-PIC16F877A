@@ -19,7 +19,7 @@ void enviar_bcd(unsigned char num){ // Convierte número a binario
     PORTBbits.RB1 = (num >> 1) & 1; // bit 1
     PORTBbits.RB2 = (num >> 2) & 1; // bit 2
     PORTBbits.RB3 = (num >> 3) & 1; // bit 3
-}
+} 
 
 // ================= MOSTRAR NÚMERO =================
 void mostrar_numero(int numero){ //Recibe, separa y muestra datos

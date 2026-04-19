@@ -1,0 +1,76 @@
+#include <xc.h> //Librería del compilador XC8
+
+// ================= CONFIGURACIÓN =================
+#pragma config FOSC = HS       // Oscilador externo de alta velocidad
+#pragma config WDTE = OFF      // Watchdog desactivado
+#pragma config PWRTE = ON      // Power-up timer activado
+#pragma config BOREN = OFF     // Brown-out reset menor a 4V desactivado
+#pragma config LVP = OFF       // Programación en bajo voltaje desactivada
+#pragma config CPD = OFF       // Protección de datos desactivada
+#pragma config WRT = OFF       // Escritura protegida desactivada
+#pragma config CP = OFF        // Protección de código desactivada
+
+#define _XTAL_FREQ 8000000     // Frecuencia de 8 MHz
+
+// ================= FUNCIÓN BCD =================
+void enviar_bcd(unsigned char num){ // Convierte número a binario
+    // Enviar cada bit del número a RB0?RB3
+    PORTBbits.RB0 = (num >> 0) & 1; // bit 0
+    PORTBbits.RB1 = (num >> 1) & 1; // bit 1
+    PORTBbits.RB2 = (num >> 2) & 1; // bit 2
+    PORTBbits.RB3 = (num >> 3) & 1; // bit 3
+}
+
+// ================= MOSTRAR NÚMERO =================
+void mostrar_numero(int numero){ //Recibe, separa y muestra datos
+
+    unsigned char d1, d2, d3, d4;
+
+    // Separar el número en dígitos
+    d1 = numero % 10;           // unidades
+    d2 = (numero / 10) % 10;    // decenas
+    d3 = (numero / 100) % 10;   // centenas
+    d4 = (numero / 1000) % 10;  // millares
+
+    // Multiplexado: encender un display a la vez
+
+    PORTD = 0x01;   // Activar display 1 (millares)
+    enviar_bcd(d4); // Enviar número
+    __delay_ms(1);  // Pequeño retardo
+
+    PORTD = 0x02;   // Activar display 2 (centenas)
+    enviar_bcd(d3);
+    __delay_ms(1);
+
+    PORTD = 0x04;   // Activar display 3 (decenas)
+    enviar_bcd(d2);
+    __delay_ms(1);
+
+    PORTD = 0x08;   // Activar display 4 (unidades)
+    enviar_bcd(d1);
+    __delay_ms(1);
+}
+
+// ================= PROGRAMA PRINCIPAL =================
+void main(){
+    int contador = 0;
+    int i;
+
+    TRISB = 0x00; // PORTB como salida (BCD)
+    TRISD = 0x00; // PORTD como salida (control displays)
+    
+    PORTB = 0x00; //Apaga antes de iniciar todo
+    PORTD = 0x00;
+
+    while(1){
+        // Refrescar varias veces para evitar parpadeo
+        for(i = 0; i < 100; i++){
+            mostrar_numero(contador);
+        }
+        contador++; // Incrementar número
+        // Reiniciar si llega a 9999
+        if(contador > 9999){
+            contador = 0;
+        }
+    }
+}

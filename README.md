@@ -50,7 +50,7 @@ void main(void) {
 
 ---
 
-## 🔧 Especificaciones Técnicas
+## 🔧 Especificaciones Técnicas (Parte 1)
 
 | Especificación | Detalle |
 |---|---|
@@ -61,7 +61,7 @@ void main(void) {
 
 ---
 
-## 🚀 Cómo Usar
+## 🚀 Cómo Usar (Parte 1)
 
 1. Revisa el esquemático y realiza las conexiones del circuito
 2. Copia el código fuente en MPLAB X IDE
@@ -72,7 +72,7 @@ void main(void) {
 
 ---
 
-## 📌 Funcionalidad
+## 📌 Funcionalidad (Parte 1)
 
 - **RB0**: Entrada digital (Pulsador)
 - **RB1**: Salida digital (LED)

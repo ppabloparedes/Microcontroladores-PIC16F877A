@@ -87,9 +87,11 @@ En la parte 2_1 realizaremos un contador de 0 a 9999 utilizando el PIC16F877A co
 ---
 
 ## 📸 Esquemático - Diagrama de Conexión en el Módulo de Microcontroladores (Parte 2_1)
+![Diagrama de conexión P2_1](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/2168f4156d3d9d463da531c059c56398263faf54/Diagrama%20de%20conexi%C3%B3n%20P2_1.png?raw=true)
 
 ![Diagrama de conexión P2_1](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/36f915ee0828095de10cacc9988829b669b20634/Diagrama%20de%20conexi%C3%B3n%20P2_1.png?raw=true)
 
+https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/2168f4156d3d9d463da531c059c56398263faf54/Diagrama%20de%20conexi%C3%B3n%20P2_1.png
 ---
 
 ## 💻 Código Fuente en MPLAB X IDE - Parte 2_1

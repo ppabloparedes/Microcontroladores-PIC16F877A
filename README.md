@@ -1,24 +1,18 @@
-# Comprehensive Documentation for PIC18F4550 Projects
+# Microcontroladores PIC16F877A
 
-## Project Overview
-This documentation provides an overview of microcontroller projects developed using the PIC18F4550. It includes code examples and circuit diagrams to help understand the implementation.
+## Circuit Diagram
 
-## Code Example for PIC18F4550 (Parte1)
-```c
-#include <xc.h>
+![Circuit Diagram](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/54ecaef033b274b7b9815eee68acd3f49e2a8aa6/Diagrama%20de%20conexi%C3%B3n%20P1_1.png)
 
-// Configuration bits
-#pragma config FCMEN = OFF
-#pragma config IESO = OFF
-#pragma config PD = OFF
-#pragma config MCLRE = ON
+## Code Files
 
-void main(void) {
-    TRISB = 0; // Set PORTB as output
-    while(1) {
-        PORTB = 0xFF; // Set all pins high
-        __delay_ms(500);
-        PORTB = 0x00; // Set all pins low
-        __delay_ms(500);
-    }
-}
+This repository contains code files for programming the PIC16F877A microcontroller. Below are the available code files:
+- `main.c`: The main application logic for the microcontroller.
+- `config.h`: Configuration settings necessary for compiling the microcontroller's firmware.
+
+## Getting Started
+
+To get started with the PIC16F877A, follow these steps:
+1. Clone the repository using the following command:
+   ```bash
+   git clone https://github.com/ppabloparedes/Microcontroladores-PIC16F877A.git

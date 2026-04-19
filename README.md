@@ -82,7 +82,7 @@ void main(void) {
 
 # Parte 2_1: Microcontroladores PIC16F877A - Contador Multiplexado en 4 Displays de 7 Segmentos
 
-En la parte 2_1 realizaremos un contador de 0 a 9999 utilizando el PIC16F877A con 4 displays de 7 segmentos multiplexados y decodificadores BCD.
+En la parte 2_1 realizaremos un contador de 0 a 9999 utilizando el PIC16F877A con 4 displays de 7 segmentos multiplexados y decodificadores BCD (Código Binario Decimal).
 
 ---
 

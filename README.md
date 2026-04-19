@@ -80,6 +80,139 @@ void main(void) {
 
 ---
 
+# Parte 2_1: Microcontroladores PIC16F877A - Contador Multiplexado en 4 Displays de 7 Segmentos
+
+En la parte 2_1 realizaremos un contador de 0 a 9999 utilizando el PIC16F877A con 4 displays de 7 segmentos multiplexados y decodificadores BCD.
+
+---
+
+## 📸 Esquemático - Diagrama de Conexión en Proteus (Parte 2_1)
+
+![Diagrama de conexión P2_1](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/36f915ee0828095de10cacc9988829b669b20634/Diagrama%20de%20conexi%C3%B3n%20P2_1.png?raw=true)
+
+---
+
+## 💻 Código Fuente en MPLAB X IDE - Parte 2_1
+
+```c
+#include <xc.h> //Librería del compilador XC8
+
+// ================= CONFIGURACIÓN =================
+#pragma config FOSC = HS       // Oscilador externo de alta velocidad
+#pragma config WDTE = OFF      // Watchdog desactivado
+#pragma config PWRTE = ON      // Power-up timer activado
+#pragma config BOREN = OFF     // Brown-out reset menor a 4V desactivado
+#pragma config LVP = OFF       // Programación en bajo voltaje desactivada
+#pragma config CPD = OFF       // Protección de datos desactivada
+#pragma config WRT = OFF       // Escritura protegida desactivada
+#pragma config CP = OFF        // Protección de código desactivada
+
+#define _XTAL_FREQ 8000000     // Frecuencia de 8 MHz
+
+// ================= FUNCIÓN BCD =================
+void enviar_bcd(unsigned char num){ // Convierte número a binario
+    // Enviar cada bit del número a RB0?RB3
+    PORTBbits.RB0 = (num >> 0) & 1; // bit 0
+    PORTBbits.RB1 = (num >> 1) & 1; // bit 1
+    PORTBbits.RB2 = (num >> 2) & 1; // bit 2
+    PORTBbits.RB3 = (num >> 3) & 1; // bit 3
+} 
+
+// ================= MOSTRAR NÚMERO =================
+void mostrar_numero(int numero){ //Recibe, separa y muestra datos
+
+    unsigned char d1, d2, d3, d4;
+
+    // Separar el número en dígitos
+    d1 = numero % 10;           // unidades
+    d2 = (numero / 10) % 10;    // decenas
+    d3 = (numero / 100) % 10;   // centenas
+    d4 = (numero / 1000) % 10;  // millares
+
+    // Multiplexado: encender un display a la vez
+
+    PORTD = 0x01;   // Activar display 1 (millares)
+    enviar_bcd(d4); // Enviar número
+    __delay_ms(1);  // Pequeño retardo
+
+    PORTD = 0x02;   // Activar display 2 (centenas)
+    enviar_bcd(d3);
+    __delay_ms(1);
+
+    PORTD = 0x04;   // Activar display 3 (decenas)
+    enviar_bcd(d2);
+    __delay_ms(1);
+
+    PORTD = 0x08;   // Activar display 4 (unidades)
+    enviar_bcd(d1);
+    __delay_ms(1);
+}
+
+// ================= PROGRAMA PRINCIPAL =================
+void main(){
+    int contador = 0;
+    int i;
+
+    TRISB = 0x00; // PORTB como salida (BCD)
+    TRISD = 0x00; // PORTD como salida (control displays)
+    
+    PORTB = 0x00; //Apaga antes de iniciar todo
+    PORTD = 0x00;
+
+    while(1){
+        // Refrescar varias veces para evitar parpadeo
+        for(i = 0; i < 100; i++){
+            mostrar_numero(contador);
+        }
+        contador++; // Incrementar número
+        // Reiniciar si llega a 9999
+        if(contador > 9999){
+            contador = 0;
+        }
+    }
+}
+```
+
+---
+
+## 🔧 Especificaciones Técnicas (Parte 2_1)
+
+| Especificación | Detalle |
+|---|---|
+| **Microcontrolador** | PIC16F877A |
+| **Voltaje de operación** | 5V |
+| **Oscilador** | 8 MHz |
+| **Puertos utilizados** | PORTB (RB0-RB3) y PORTD (RD0-RD3) |
+| **Decodificadores** | 4x BCD a 7 Segmentos |
+| **Displays** | 4x Displays de 7 Segmentos multiplexados |
+| **Rango de conteo** | 0 a 9999 |
+
+---
+
+## 🚀 Cómo Usar (Parte 2_1)
+
+1. Revisa el esquemático y realiza las conexiones del circuito
+2. Conecta los 4 displays de 7 segmentos según el diagrama
+3. Copia el código fuente en MPLAB X IDE
+4. Compila el proyecto con el compilador XC8
+5. Ubica el archivo .hex y carga el código a tu microcontrolador en Proteus
+6. Inicia la simulación del circuito
+7. Observa cómo el contador cuenta de 0 a 9999 en los 4 displays
+
+---
+
+## 📌 Funcionalidad (Parte 2_1)
+
+- **PORTB (RB0-RB3)**: Salidas digitales (Líneas BCD: A, B, C, D) para los decodificadores
+- **PORTD (RD0-RD3)**: Salidas digitales (Control de habilitación de cada display)
+- El microcontrolador genera un contador que incrementa cada segundo
+- Utiliza multiplexado para activar un display a la vez, evitando parpadeo
+- El contador separa el número en 4 dígitos (unidades, decenas, centenas, millares)
+- Cada decodificador BCD a 7 segmentos convierte los datos a los segmentos del display
+- El contador reinicia a 0 después de llegar a 9999
+
+---
+
 # Parte 2_2: Microcontroladores PIC16F877A - Contador BCD en Display de 7 Segmentos
 
 En la parte 2 realizaremos un contador de 0 a 9 utilizando el PIC16F877A y mostraremos el resultado en un decodificador BCD a 7 segmentos.

@@ -7,9 +7,13 @@ Este repositorio contiene ejemplos de código y esquemáticos para trabajar con 
 En la parte 1 realizaremos un ejemplo práctico de la simulación del encendido de un LED utilizando el PIC18F4550 y un pulsador.
 
 ---
-## 📸 Esquemático - Diagrama de Conexión en Proteus
+## 📸 Esquemático - Diagrama de Conexión en Proteus (Parte 1)
 
 ![Diagrama de conexión P1_1](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/54ecaef033b274b7b9815eee68acd3f49e2a8aa6/Diagrama%20de%20conexi%C3%B3n%20P1_1.png?raw=true)
+
+## 📸 Simulación en Ejecución (Parte 1)
+
+![Diagrama de conexión P1_1 ON](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/8027131575de4235fe233ec2361e82dea26b90e7/Diagrama%20de%20conexi%C3%B3n%20P1_1%20ON.png?raw=true)
 
 ---
 

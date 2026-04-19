@@ -41,3 +41,36 @@ void main(void) {
         }
     }
 }
+```
+
+---
+
+## 🔧 Especificaciones Técnicas
+
+| Especificación | Detalle |
+|---|---|
+| **Microcontrolador** | PIC18F4550 |
+| **Voltaje de operación** | 5V |
+| **Oscilador** | 8 MHz |
+| **Puerto utilizado** | PORTB (RB0 y RB1) |
+
+---
+
+## 🚀 Cómo Usar
+
+1. Revisa el esquemático para entender las conexiones del circuito
+2. Copia el código fuente en MPLAB X IDE
+3. Compila el proyecto con el compilador XC8
+4. Carga el código en tu microcontrolador
+5. Conecta el circuito según el diagrama
+6. Alimenta y prueba el funcionamiento
+
+---
+
+## 📌 Funcionalidad
+
+- **RB0**: Entrada digital (Pulsador)
+- **RB1**: Salida digital (LED)
+- El LED se enciende cuando se presiona el pulsador y se apaga cuando se suelta
+
+---

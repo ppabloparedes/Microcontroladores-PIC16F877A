@@ -1,0 +1,26 @@
+#include <xc.h>
+
+// CONFIGURACIÓN
+#pragma config FOSC = HS
+#pragma config WDT = OFF
+#pragma config LVP = OFF
+#pragma config PBADEN = OFF
+
+#define _XTAL_FREQ 8000000  // 8 MHz
+
+void main(void) {
+    
+    // Configurar puertos
+    TRISBbits.TRISB0 = 1; // RB0 como entrada (pulsador)
+    TRISBbits.TRISB1 = 0; // RB1 como salida (LED)
+    
+    LATBbits.LATB1 = 0; // LED apagado inicialmente
+
+    while(1) {
+        if(PORTBbits.RB0 == 1) {  // Si se presiona el pulsador
+            LATBbits.LATB1 = 1;  // Encender LED
+        } else {
+            LATBbits.LATB1 = 0;  // Apagar LED
+        }
+    }
+}

@@ -86,7 +86,7 @@ En la parte 2_1 realizaremos un contador de 0 a 9999 utilizando el PIC16F877A co
 
 ---
 
-## 📸 Esquemático - Diagrama de Conexión en Proteus (Parte 2_1)
+## 📸 Esquemático - Diagrama de Conexión en el Módulo de Microcontroladores (Parte 2_1)
 
 ![Diagrama de conexión P2_1](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/36f915ee0828095de10cacc9988829b669b20634/Diagrama%20de%20conexi%C3%B3n%20P2_1.png?raw=true)
 
@@ -183,8 +183,8 @@ void main(){
 | **Voltaje de operación** | 5V |
 | **Oscilador** | 8 MHz |
 | **Puertos utilizados** | PORTB (RB0-RB3) y PORTD (RD0-RD3) |
-| **Decodificadores** | 4x BCD a 7 Segmentos |
-| **Displays** | 4x Displays de 7 Segmentos multiplexados |
+| **Decodificadores** | CD4511 BCD a 7 Segmentos |
+| **Displays** | 4 Displays de 7 Segmentos multiplexados |
 | **Rango de conteo** | 0 a 9999 |
 
 ---
@@ -192,12 +192,12 @@ void main(){
 ## 🚀 Cómo Usar (Parte 2_1)
 
 1. Revisa el esquemático y realiza las conexiones del circuito
-2. Conecta los 4 displays de 7 segmentos según el diagrama
+2. Conecta el módulo de 4 displays de 7 segmentos según el diagrama
 3. Copia el código fuente en MPLAB X IDE
 4. Compila el proyecto con el compilador XC8
-5. Ubica el archivo .hex y carga el código a tu microcontrolador en Proteus
-6. Inicia la simulación del circuito
-7. Observa cómo el contador cuenta de 0 a 9999 en los 4 displays
+5. Ubica el archivo .hex y carga el código a tu microcontrolador con MPLAB IPE
+6. Realiza el reseteo por software en MPLAB IPE
+7. Observa cómo el contador cuenta de 0 a 9999 en el módulo display de 4 digitos
 
 ---
 
@@ -215,7 +215,7 @@ void main(){
 
 # Parte 2_2: Microcontroladores PIC16F877A - Contador BCD en Display de 7 Segmentos
 
-En la parte 2 realizaremos un contador de 0 a 9 utilizando el PIC16F877A y mostraremos el resultado en un decodificador BCD a 7 segmentos.
+En la parte 2_2 realizaremos un contador de 0 a 9 utilizando el PIC16F877A y mostraremos el resultado en un decodificador BCD a 7 segmentos.
 
 ---
 

@@ -1,18 +1,19 @@
-# Microcontroladores PIC18F4550 - Parte 1
-
 ## Descripción
 
-Este repositorio contiene ejemplos de código y esquemáticos para trabajar con microcontroladores PIC16F877A y PIC18F4550. En esta **Parte 1** encontrarás la configuración inicial, el esquemático del circuito y el código fuente necesario para comenzar a programar estos microcontroladores.
+Este repositorio contiene ejemplos de código y esquemáticos para trabajar con microcontroladores PIC16F877A y PIC18F4550. Encontrarás la configuración inicial, el esquemático del circuito y el código fuente necesario para comenzar a programar estos microcontroladores.
 
 ---
+# Microcontroladores PIC18F4550 - Parte 1
+En la parte 1 realizaremos un ejemplo práctico de la simulación del encendido de un LED utilizando el PIC18F4550 y un pulsador.
 
-## 📸 Esquemático - Diagrama de Conexión
+---
+## 📸 Esquemático - Diagrama de Conexión en Proteus
 
 ![Diagrama de conexión P1_1](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/54ecaef033b274b7b9815eee68acd3f49e2a8aa6/Diagrama%20de%20conexi%C3%B3n%20P1_1.png?raw=true)
 
 ---
 
-## 💻 Código Fuente - Parte 1
+## 💻 Código Fuente en MPLAB X IDE - Parte 1
 
 ```c
 #include <xc.h>
@@ -58,12 +59,12 @@ void main(void) {
 
 ## 🚀 Cómo Usar
 
-1. Revisa el esquemático para entender las conexiones del circuito
+1. Revisa el esquemático y realiza las conexiones del circuito
 2. Copia el código fuente en MPLAB X IDE
 3. Compila el proyecto con el compilador XC8
-4. Carga el código en tu microcontrolador
-5. Conecta el circuito según el diagrama
-6. Alimenta y prueba el funcionamiento
+4. Ubica el archivo .hex y carga el código a tu microcontrolador en proteus
+5. Inicia la simulación del circuito
+6. Prueba el encendido del LED al presionar el pulsador
 
 ---
 

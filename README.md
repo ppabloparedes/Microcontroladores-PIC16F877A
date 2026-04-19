@@ -80,23 +80,23 @@ void main(void) {
 
 ---
 
-# Parte 2: Microcontroladores PIC16F877A - Contador BCD en Display de 7 Segmentos
+# Parte 2_2: Microcontroladores PIC16F877A - Contador BCD en Display de 7 Segmentos
 
 En la parte 2 realizaremos un contador de 0 a 9 utilizando el PIC16F877A y mostraremos el resultado en un decodificador BCD a 7 segmentos.
 
 ---
 
-## 📸 Esquemático - Diagrama de Conexión en Proteus (Parte 2)
+## 📸 Esquemático - Diagrama de Conexión en Proteus (Parte 2_2)
 
 ![Diagrama de conexión P2_2](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/69628c927790dd4c2cac06aceac46918d26ca12f/Diagrama%20de%20conexi%C3%B3n%20P2_2.png?raw=true)
 
-## 📸 Simulación en Ejecución (Parte 2)
+## 📸 Simulación en Ejecución (Parte 2_2)
 
 ![Diagrama de conexión P2_2 ON](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/69628c927790dd4c2cac06aceac46918d26ca12f/Diagrama%20de%20conexi%C3%B3n%20P2_2%20ON.png?raw=true)
 
 ---
 
-## 💻 Código Fuente en MPLAB X IDE - Parte 2
+## 💻 Código Fuente en MPLAB X IDE - Parte 2_2
 
 ```c
 #include <xc.h>
@@ -144,7 +144,7 @@ void main(){
 
 ---
 
-## 🔧 Especificaciones Técnicas (Parte 2)
+## 🔧 Especificaciones Técnicas (Parte 2_2)
 
 | Especificación | Detalle |
 |---|---|
@@ -157,7 +157,7 @@ void main(){
 
 ---
 
-## 🚀 Cómo Usar (Parte 2)
+## 🚀 Cómo Usar (Parte 2_2)
 
 1. Revisa el esquemático y realiza las conexiones del circuito
 2. Copia el código fuente en MPLAB X IDE
@@ -168,7 +168,7 @@ void main(){
 
 ---
 
-## 📌 Funcionalidad (Parte 2)
+## 📌 Funcionalidad (Parte 2_2)
 
 - **RB0-RB3**: Salidas digitales (Líneas BCD: A, B, C, D)
 - El microcontrolador genera un contador que incrementa cada segundo

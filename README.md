@@ -9,11 +9,11 @@ En la parte 1 realizaremos un ejemplo práctico de la simulación del encendido 
 ---
 ## 📸 Esquemático - Diagrama de Conexión en Proteus (Parte 1)
 
-![Diagrama de conexión P1_1](://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/54ecaef033b274b7b9815eee68acd3f49e2a8aa6/Diagrama%20de%20conexi%C3%B3n%20P1_1.png?raw=true)
+![Diagrama de conexión P1_1](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/54ecaef033b274b7b9815eee68acd3f49e2a8aa6/Diagrama%20de%20conexi%C3%B3n%20P1_1.png?raw=true)
 
 ## 📸 Simulación en Ejecución (Parte 1)
 
-![Diagrama de conexión P1_1 ON](://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/8027131575de4235fe233ec2361e82dea26b90e7/Diagrama%20de%20conexi%C3%B3n%20P1_1%20ON.png?raw=true)
+![Diagrama de conexión P1_1 ON](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/8027131575de4235fe233ec2361e82dea26b90e7/Diagrama%20de%20conexi%C3%B3n%20P1_1%20ON.png?raw=true)
 
 ---
 
@@ -184,10 +184,10 @@ En la parte 2_2 realizaremos un contador de 0 a 9999 utilizando el PIC16F877A co
 
 ---
 ## 📸 Módulos a conectar (Parte 2_2)
-![Diagrama de cnexión P2_1](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/2168f4156d3d9d463da531c059c56398263faf54/Diagrama%20de%20conexi%C3%B3n%20P2_1.png?raw=true)
+![Diagrama de cnexión P2_1](://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/2168f4156d3d9d463da531c059c56398263faf54/Diagrama%20de%20conexi%C3%B3n%20P2_1.png?raw=true)
 
 ## 📸 Esquemático - Diagrama de Conexión en el Módulo de Microcontroladores (Parte 2_2)
-![Diagrama de cnexión P2_1](https://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/daa5e7563f67b17262768e64c9e98ffef4d608d3/Diagrama%20de%20conexi%C3%B3n%20P2_1%20ON.png?raw=true)
+![Diagrama de cnexión P2_1](://github.com/ppabloparedes/Microcontroladores-PIC16F877A/blob/daa5e7563f67b17262768e64c9e98ffef4d608d3/Diagrama%20de%20conexi%C3%B3n%20P2_1%20ON.png?raw=true)
 
 ---
 
